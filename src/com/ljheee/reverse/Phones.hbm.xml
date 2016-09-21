@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-9-2 11:26:58 by Hibernate Tools 4.3.1.Final -->
+<hibernate-mapping>
+    <class name="com.ljheee.reverse.Phones" table="phones" catalog="mypersons" optimistic-lock="version">
+        <id name="id" type="java.lang.Integer">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="persons" class="com.ljheee.reverse.Persons" fetch="select">
+            <column name="person_id" not-null="true" />
+        </many-to-one>
+        <property name="phone" type="string">
+            <column name="phone" length="11" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
