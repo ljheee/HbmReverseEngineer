@@ -1,0 +1,3 @@
+# HbmReverseEngineer
+HbmReverseEngineer
+使用Eclipse完成Hibernate逆向工程。先创建DB数据库关系表，用工具生成生成mapping 和Java实体类。
